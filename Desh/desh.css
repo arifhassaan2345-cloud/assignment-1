@@ -1,0 +1,379 @@
+
+  /* ইউনিভার্সাল সিলেক্টর দিয়ে ডিফল্ট মার্জিন-প্যাডিং জিরো করা */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* কন্টেইনার সাইজ এবং মাঝখানে আনা */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* দুই পাশে একটু জায়গা রাখার জন্য */
+}
+
+/* নেভিগেশন বারকে ৩ ভাগে ভাগ করা */
+.container {
+  display: flex;
+  justify-content: space-between; /* লোগো, মেনু ও বাটনকে ৩ দিকে ছড়িয়ে দেবে */
+  align-items: center; /* লম্বালম্বিভাবে একদম মাঝখানে রাখবে */
+  padding: 15px 20px;
+}
+
+/* লোগো স্টাইল */
+.logo {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* মাঝখানের মেনু লিস্ট */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px; /* প্রতিটি মেনু আইটেমের মাঝখানের দূরত্ব */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* ডানপাশের বাটন স্টাইল */
+.common-btn {
+  background-color: #1d4ed8; /* ছবির মতো নীল রঙ */
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px; /* বাটনটি চারকোনা থেকে হালকা গোল করার জন্য */
+  cursor: pointer;
+}
+
+.common-btn:hover {
+  background-color: #1e40af; /* মাউস নিলে রঙ হালকা গাঢ় হবে */
+} 
+
+/* --- Hero Banner Section --- */
+/* পুরো পেজের বেসিক রিসেট */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* হিরো সেকশন এবং ব্যাকগ্রাউন্ড ইমেজ */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* পুরো স্ক্রিন জুড়ে দেখানোর জন্য */
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* নেভিগেশন বার স্টাইল */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.95); /* ইমেজের মতো সাদা ব্যাকগ্রাউন্ড */
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+/* বাটন স্টাইল (নীল বাটন) */
+.nav-btn, .hero-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* মেইন কন্টেন্ট স্টাইল (সেন্টার করার জন্য) */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content h1 span {
+    font-style: italic; /* Connect লেখাটি বাঁকা করার জন্য */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* --- Layout Sections --- */
+.section-wrapper {
+    padding: 100px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* মূল কন্টেইনার (এখানে ২ কলামের গ্রিড তৈরি করা হয়েছে) */
+.container-speaker-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ২টি সমান সাইজের কলাম */
+  gap: 30px;                             /* কার্ডগুলোর মাঝখানের গ্যাপ */
+  max-width: 1100px;                     /* পুরো সেকশনের সর্বোচ্চ চওড়া */
+  margin: 0 auto 60px auto;              /* মাঝখানে সারিবদ্ধ করার জন্য */
+  padding: 0 20px;
+}
+
+/* প্রতিটি স্পিকার কার্ডের স্টাইল */
+.container-profile {
+  background-color: #ffffff;
+  border: 1px solid #eef2f5;             /* হালকা বর্ডার */
+  border-radius: 12px;                   /* কোণাগুলো গোল করার জন্য */
+  overflow: hidden;                      /* ছবির বাড়তি অংশ কেটে ফেলার জন্য */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* হালকা ছায়া বা শ্যাডো */
+  transition: transform 0.2s ease;
+}
+
+/* কার্ডের ওপর মাউস নিলে সামান্য অ্যানিমেশন (ঐচ্ছিক) */
+.container-profile:hover {
+  transform: translateY(-5px);
+}
+
+/* ছবির সাইজ এবং কোণা মেলানো */
+.profile-image-frame {
+  width: 100%;
+  height: 280px;                         /* সব ছবির উচ্চতা সমান রাখার জন্য */
+  object-fit: cover;                     /* ছবি যেন চ্যাপ্টা না হয়ে সুন্দরভাবে বসে */
+  display: block;
+}
+
+/* টেক্সট বক্সের ভেতরের প্যাডিং ও অ্যালাইনমেন্ট */
+.box {
+  padding: 25px;
+  text-align: left;                      /* লেখাগুলো বাম দিক থেকে শুরু হবে */
+}
+
+/* ক্যাটাগরি ট্যাগ (যেমন: AI / ML) */
+.card.title {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2563eb;                        /* নীল রঙ */
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* স্পিকারের নাম */
+.fullname {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+/* পদবী বা সাবটেক্সট */
+.target.profile {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* --- Pricing Packages --- */
+.tier-matrix-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 24px;
+}
+
+.about-card {
+    display: table-cell;
+    background-color: red;
+    padding: 44px 32px;
+    vertical-align: middle;
+    
+}
+
+.tier-card-cell.premium-focus {
+    background-color:black;
+    color:red;
+    border: none;
+    box-shadow: 0 15px 35px rgba(15, 10, 28, 0.25);
+    
+
+.tier-title-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.premium-focus .tier-title-label {
+    color: var(--brand-secondary);
+}
+
+.tier-price-display {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.premium-focus .tier-price-display {
+    color: white;
+}
+
+.tier-price-cycle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.features-bullet-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.item{
+    font-size: 14.5px;
+    margin-bottom: 14px;
+    color: #4b5563;
+    position: relative;
+    padding-left: 24px;
+}
+
+.premium-focus .feature-bullet-item {
+    color: #e5e7eb;
+}
+
+.feature-bullet-item::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--brand-primary);
+}
+
+.premium-focus .feature-bullet-item::before {
+    color: var(--brand-secondary);
+}
+
+.tier-button-action {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--brand-primary);
+    color: var(--brand-primary);
+    transition: var(--transition-smooth);
+}
+
+.tier-button-action:hover {
+    background-color: var(--brand-primary);
+    color: white;
+}
+
+.premium-focus .tier-button-action {
+    background-color: var(--brand-secondary);
+    color: white;
+    border: none;
+}
+
+.alt-action-button {
+    border-color: #9ca3af;
+    color: var(--text-primary);
+}
+
+/* --- Supplemental AI Block --- */
+.supplemental-block {
+    margin: 40px auto 100px auto;
+    max-width: 1152px;
+    background-color: #f5f3ff;
+    border: 2px dashed #ddd6fe;
+    border-radius: var(--radius-lg);
+    padding: 64px 32px;
+    text-align: center;
+}
+
+.supplemental-title {
+    color: #4c1d95;
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.supplemental-caption {
+    color: #7c3aed;
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer{
+    background:#0f1e32;
+    color:#8d99a8;
+    padding:50px 7%;
+    display:flex;
+    justify-content:space-between;
+}
+footer a{
+    color:#8d99a8;
+    text-decoration:none;
+    margin-left:30px;
+}
+
+/* --- Responsiveness Rules --- */
+@media (max-width: 1024px) {
+    .profile-deck, .tier-matrix-row { display: block; }
+    .profile-card-container, .tier-card-cell { display: block; width: 100%; margin-bottom: 30px; }
+    .tier-card-cell.premium-focus { transform: none; }
+}
+@media (max-width: 768px) {
+    .nav-container, .brand-wrapper, .menu-wrapper, .header-action-wrapper { display: block; width: 100%; text-align: center; }
+    .menu-wrapper { margin: 20px 0; }
+    .hero-main-title { font-size: 2.4rem; }
+    .footer-content-alignment, .footer-copyright, .footer-navigation-links { display: block; text-align: center; width: 100%; }
+    .footer-navigation-links { margin-top: 20px; }
+}
